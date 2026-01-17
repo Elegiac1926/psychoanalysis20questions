@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精神分析三十问 · 直视你的灵魂</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 开始页 -->
+    <div id="start-page" class="page active">
+        <div class="container">
+            <h1 class="title">精神分析三十问</h1>
+            <p class="subtitle">这不是一个测试，而是一场对话</p>
+            <p class="intro">
+                以下问题没有标准答案。<br>
+                它们不会给你贴标签，<br>
+                只会递给你一面镜子。<br><br>
+                请在安静的时刻，诚实作答。
+            </p>
+            <button class="btn-primary" onclick="startTest()">开始</button>
+        </div>
+    </div>
+
+    <!-- 问题页 -->
+    <div id="question-page" class="page">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+            <p class="question-number" id="question-number"></p>
+            <h2 class="question-text" id="question-text"></h2>
+            <div class="options" id="options"></div>
+            <button class="btn-secondary" id="btn-prev" onclick="prevQuestion()">上一题</button>
+        </div>
+    </div>
+
+    <!-- 验证码页 -->
+    <div id="verify-page" class="page">
+        <div class="container">
+            <h2 class="verify-title">请输入访问码</h2>
+            <p class="verify-desc">完成测试需要访问码<br>如果你还没有，请联系获取</p>
+            <input type="text" id="access-code-input" class="code-input" placeholder="请输入访问码">
+            <p class="error-msg" id="error-msg"></p>
+            <button class="btn-primary" onclick="verifyCode()">确认</button>
+        </div>
+    </div>
+
+    <!-- 结果页 -->
+    <div id="result-page" class="page">
+        <div class="container">
+            <h2 class="result-title" id="result-title"></h2>
+            <div class="result-content" id="result-content"></div>
+            <button class="btn-secondary" onclick="restart()">重新开始</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+     <script src="algorithm.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

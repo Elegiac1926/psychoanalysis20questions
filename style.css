@@ -1,0 +1,304 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Songti SC', 'SimSun', serif;
+    background: linear-gradient(135deg, #f5f0e8 0%, #faf7f2 50%, #f0ebe3 100%);
+    min-height: 100vh;
+    color: #3d3d3d;
+    line-height: 1.8;
+}
+
+/* 页面容器 */
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.page.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 60px 50px;
+    border-radius: 2px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+/* 开始页 */
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #2c2c2c;
+    margin-bottom: 16px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #8b7355;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.intro {
+    font-size: 1.05rem;
+    color: #5d5d5d;
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 2;
+}
+
+/* 按钮 */
+.btn-primary, .btn-secondary {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 14px 0;
+    border: none;
+    border-radius: 2px;
+    font-size: 1rem;
+    font-family: 'Songti SC', 'SimSun', serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #8b7355;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #6d5a44;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #8b7355;
+    border: 1px solid #8b7355;
+    margin-top: 20px;
+}
+
+.btn-secondary:hover {
+    background: #8b7355;
+    color: #fff;
+}
+
+/* 进度条 */
+.progress-bar {
+    width: 100%;
+    height: 3px;
+    background: #e8dcc8;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #a89178, #8b7355);
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+/* 问题页 */
+.question-number {
+    font-size: 0.9rem;
+    color: #a89178;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.question-text {
+    font-size: 1.4rem;
+    color: #2c2c2c;
+    margin-bottom: 40px;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+/* 选项 */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.option {
+    background: #fafafa;
+    border: 1px solid #e8dcc8;
+    padding: 20px 24px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    color: #4d4d4d;
+    line-height: 1.7;
+}
+
+.option:hover {
+    background: #f5f0e8;
+    border-color: #a89178;
+    transform: translateX(8px);
+}
+
+.option.selected {
+    background: #f5f0e8;
+    border-color: #8b7355;
+    border-width: 2px;
+    color: #2c2c2c;
+}
+
+/* 验证码页 */
+.verify-title {
+    font-size: 1.8rem;
+    color: #2c2c2c;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.verify-desc {
+    text-align: center;
+    color: #6d6d6d;
+    margin-bottom: 40px;
+    line-height: 2;
+}
+
+.code-input {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #d4c4b0;
+    border-radius: 2px;
+    font-size: 1.1rem;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+    background: #fafafa;
+    color: #3d3d3d;
+}
+
+.code-input:focus {
+    outline: none;
+    border-color: #8b7355;
+    background: #fff;
+}
+
+.error-msg {
+    color: #c76d5e;
+    text-align: center;
+    font-size: 0.9rem;
+    min-height: 24px;
+    margin-bottom: 20px;
+}
+
+/* 结果页 */
+.result-title {
+    font-size: 2rem;
+    color: #2c2c2c;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.result-content {
+    font-size: 1.1rem;
+    color: #4d4d4d;
+    line-height: 2.2;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+.result-content h3 {
+    color: #8b7355;
+    font-size: 1.3rem;
+    margin: 30px 0 16px 0;
+    font-weight: 400;
+}
+
+.result-content p {
+    margin-bottom: 20px;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 30px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .question-text {
+        font-size: 1.2rem;
+    }
+    
+    .option {
+        padding: 16px 20px;
+    }
+}
+
+/* 结果页特殊样式 */
+.result-content .opening {
+    font-size: 1.3rem;
+    color: #6d5a44;
+    text-align: center;
+    margin-bottom: 40px;
+    font-style: italic;
+    line-height: 2;
+    border-left: 3px solid #d4c4b0;
+    padding-left: 20px;
+}
+
+.result-content .closing {
+    font-size: 1rem;
+    color: #8b7355;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #e8dcc8;
+    font-style: italic;
+    line-height: 2.2;
+}
+
+.result-content h3 {
+    color: #6d5a44;
+    font-size: 1.2rem;
+    margin: 35px 0 16px 0;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.result-content p {
+    margin-bottom: 20px;
+    text-indent: 2em;
+}
+
+.result-content p:has(strong) {
+    text-indent: 0;
+}
+
+.result-content strong {
+    color: #8b7355;
+    font-weight: 500;
+}
