@@ -103,7 +103,17 @@ const resultArchetypes = {
       identity: "这个测试没有捕捉到你的核心模式——可能因为你正处在转变期，可能因为你的防御太成功，也可能因为你真的是一个'未完成'的主体。",
       invitation: "这不是失败，而是一种开放性。继续观察自己在不同情境中的反应。主体结构不是命运，而是一种倾向——它可以被理解，也可以被改写。"
     }
-  }
+  },
+
+  "整合的主体：在路上": {
+    keywords: ['secure_paternal', 'healthy_satisfaction', 'balanced_consideration', 'worked_through'],
+    minScore: 8,
+    description: {
+        core: "你正在成为一个相对整合的人。",
+        identity: "你既能感受情感，也能理性思考；你接受自己的不完美，也在持续成长。你可能经历过痛苦，但你没有被困住。你是'在路上'的人。",
+        invitation: "继续保持觉察和开放。"
+    }
+}
 };
 
 // 生成分析报告（核心算法）
@@ -237,3 +247,8 @@ function generateAnalysis(scores) {
     
     return { title, content };
 }
+
+
+
+
+

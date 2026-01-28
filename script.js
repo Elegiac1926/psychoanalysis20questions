@@ -84,8 +84,8 @@ function selectOption(index) {
             currentQuestion++;
             renderQuestion();
         } else {
-            // 所有问题完成，跳转验证页
-            showPage('verify-page');
+            // 所有问题完成，直接跳转结果页（跳过验证码页）
+            calculateResult();
         }
     }, 200);
 }
